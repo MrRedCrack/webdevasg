@@ -1,0 +1,574 @@
+
+.go-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.go-top:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+nav{
+    background-color: burlywood;
+    align-items: center;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    position:relative;
+}
+nav img{
+    height: 50px;
+    display: block;
+    border-radius: 7px;
+}
+nav ul{
+    list-style-type: none;
+    background-color:burlywood;
+    padding: 0px;
+    margin: 0px;
+    overflow:hidden;
+    display:flex;
+}
+nav a{
+    color:#765341;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    margin-right:5px;
+}
+nav a:hover{
+    background-color: #765341;
+    color:antiquewhite;
+    border-radius: 7px;
+}
+nav li{
+    float:left;
+}
+.nav-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positions the dropdown right below the nav item */
+    left: 0;
+    width: 100%; /* Ensures the dropdown spans the full width of the nav item */
+    z-index: 1;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Ensures padding does not affect width */
+}
+.nav-dropdown.cuisine-dropdown {
+    background-color: #765341; /* Background color for Cuisine dropdown */
+}
+.dropdown-text {
+    font-size: 18px; /* Adjust font size as needed */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px; /* Space between header and content */
+}
+.dropdown-text.cuisine{
+    color:antiquewhite;
+}
+.dropdown-text.recipe{
+    color:#765341;
+}
+.nav-dropdown.recipe-dropdown {
+    background-color: antiquewhite; /* Background color for Recipe dropdown */
+}
+nav li:hover .nav-dropdown {
+    display: block;
+}
+
+/*index.html images*/
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-box {
+    position: relative;
+    width: 100%;
+    max-width: 1500px; /* Adjust as needed */
+    margin: 20px 0;
+}
+div img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.textOnPicMain {
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: antiquewhite;
+    font-size: 30px; /* Adjust size as needed */
+    padding: 10px;
+    border-radius: 8px;
+    width: 90%; /* Adjust width as needed */
+}
+.textOnPicTwo {
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 26px; /* Adjust size as needed */
+    padding: 10px;
+    border-radius: 8px;
+    width: 90%; /* Adjust width as needed */
+}
+.textOnPicThree {
+    position: absolute;
+    top: 79%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: antiquewhite;
+    font-size: 30px; /* Adjust size as needed */
+    padding: 10px;
+    border-radius: 8px;
+    width: 90%; /* Adjust width as needed */
+}
+.learnMoreTwo {
+    position: absolute;
+    bottom: 10px;
+    left: 70px;
+    color: #765341;
+    font-size: 25px;
+    text-align: center;
+}
+.learnMoreThree {
+    position: absolute;
+    bottom: 120px;
+    left: 72px;
+    color: antiquewhite;
+    font-size: 25px;
+    text-align: center;
+}
+.learnMoreTwo:hover, .learnMoreThree:hover{
+    font-size:28px;
+}
+
+
+/*cuisine.html*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #ffda9e;
+}
+
+.container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.text {
+    width: 50%;
+    padding: 20px;
+}
+
+.text h2 {
+    margin-top: 20px;
+    font-size: 34px;
+    color:#765341;
+}
+.text p {
+    font-size: 20px;
+    color: #96685c;
+    margin: 10px auto;
+}
+.image {
+    width: 50%;
+    padding: 20px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+.learn-more {
+    color: rgb(122, 77, 18);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*foodPages*/
+.content {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.content img {
+    max-width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.content h2 {
+    margin-top: 20px;
+    font-size: 34px;
+    color:#765341;
+}
+.content h3{
+    color:#8e6f60;
+    font-size: 24;
+}
+.content p {
+    font-size: 20px;
+    color: #ac857a;
+    max-width: 1200px;
+    margin: 10px auto;
+}
+
+.nav-button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1000;
+    transition: transform 0.3s ease, padding 0.3s ease;
+}
+.nav-button:hover {
+    transform: translateY(-50%) scale(1.3); /* Scale up the button */
+    
+}
+.nav-button.left {
+    left: 10px;
+}
+
+.nav-button.right {
+    right: 10px;
+}
+.nav-button.inactive {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+    cursor: not-allowed;
+}
+
+.map-container {
+    position: relative;
+    width: 100%; /* Adjust width as needed */
+    height: 400px; /* Set a fixed height */
+    margin-top: 20px; /* Space above the map */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.button-container {
+    text-align: center; /* Center align the button */
+    margin: 20px 0; /* Space above and below the button */
+}
+
+/* Style for the "Go to Recipe" button */
+.recipe-button {
+    display: inline-block;
+    background-color: #765341;
+    color: antiquewhite;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px; /* Circular button */
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none; /* Remove underline from link */
+}
+
+.recipe-button:hover {
+    background-color: burlywood;
+    color:#765341;
+    transform: scale(1.2);
+}
+
+/* Styling for the recipe page */
+.box-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 30%;
+    max-width:1200px; /* Optional max width */
+    margin: 5px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.box img {
+    width: 100%;
+    height: 450px;
+    display: block;
+}
+.box p {
+    padding: 15px;
+    margin: 0;
+}
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.box-container a {
+    display: block; /* Make link a block-level element */
+}
+.box-container .box {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Inherit text color */
+}
+
+/*all recipe page*/
+.recipe-container {
+    text-align: center;
+}
+
+
+.recipe-container ul, 
+.recipe-container ol {
+    display: inline-block; /* Keeps the list inline with the content */
+    text-align: left; /* Aligns list items to the left */
+    padding: 0;
+    margin: 0;
+    list-style-position: outside; /* Keeps list numbers outside the list content */
+    color: #765341;
+}
+
+.recipe-container ul li,
+.recipe-container ol li {
+    margin: 0;
+    padding-left: 0; /* Remove additional left padding */
+    color: #765341;
+    line-height: 1.6; /* Adjusts the line spacing */
+}
+
+/*aboutUs*/
+.table-container {
+    display: flex;
+    justify-content: center; /* Horizontally centers the table */
+    align-items: center; /* Vertically centers the table */
+    height: 50vh; /* Full viewport height to ensure vertical centering */
+}
+
+table {
+    border-collapse: collapse; /* Ensures table borders are collapsed */
+    width: 50%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the table horizontally */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Add border to table cells */
+    padding: 8px; /* Add padding to table cells */
+    text-align: center; /* Center text in table cells */
+}
+
+th {
+    background-color: #765341;
+    color:antiquewhite;
+}
+
+table, th, td {
+    border: 1px solid black; /* Border color for table, headers, and cells */
+}
+
+
+
+/* Toggle switch */
+.dark-mode-toggle {
+    margin-left: auto;
+    padding-right: 15px; /* Adjust space between toggle and other elements */
+}
+.dark-mode-toggle label{
+    width:50px;
+    height: 20px;
+    position: relative;
+    display: block;
+    background: antiquewhite;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+    cursor:pointer;
+    transition:0.3s;
+    top:10px;
+
+}
+.dark-mode-toggle label:after{
+    content:"";
+    width:18px;
+    height:18px;
+    position: absolute;
+    top:1px;
+    left:1px;
+    background: linear-gradient(180deg, #ffcc89,#d8860b);
+    border-radius:180px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+.dark-mode-toggle input{
+    width:0;
+    height:0;
+    visibility: hidden;
+}
+.dark-mode-toggle input:checked + label{
+    background: #28231d;
+}
+.dark-mode-toggle input:checked + label:after{
+    left: 49px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777,#3a3a3a);
+}
+.dark-mode-toggle input:checked + label + .background{
+    background: #28231d;
+}
+
+
+body {
+    margin: 0px;
+    background-color: antiquewhite; /* Light mode background color */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+body.dark-mode {
+    background-color: #28231d; /* Dark mode background color */
+    color: antiquewhite; /* Dark mode text color */
+}
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #28231d;
+    color: antiquewhite;
+}
+
+nav.dark-mode {
+    background-color: #635646;
+}
+nav.dark-mode li{
+    background-color: #635646;
+}
+nav.dark-mode a {
+    color: antiquewhite;
+}
+
+nav.dark-mode a:hover {
+    background-color: antiquewhite;
+    color: #28231d;
+}
+
+/* Dropdowns in Dark Mode */
+.dark-mode .cuisine-dropdown {
+    background-color: #333; /* Example darker color for cuisine dropdown */
+}
+
+.dark-mode .recipe-dropdown {
+    background-color: #4a4a4a; /* Example darker color for recipe dropdown */
+}
+.dark-mode .box {
+    background-color: #28231d;
+}
+.dark-mode .dropdown-text.recipe{
+    color:antiquewhite;
+}
+
+
+
+/*cookies*/
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #28231d;
+    color: antiquewhite;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.cookie-consent p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.accept-button {
+    background-color: antiquewhite;
+    color: #28231d;
+    border:none;
+    border-radius:15px;
+    margin: 5px;
+    cursor: pointer;
+}
+.accept-button:hover {
+    padding:10px;
+}
+.reject-button {
+    background-color: #5b5a5a;
+    color: antiquewhite;
+    border:none;
+    border-radius:15px;
+    cursor: pointer;
+}
+.reject-button:hover{
+    padding:10px;
+}
+
+/*facebook button*/
+.facebook-btn {
+    position: fixed;
+    bottom: 90px; /* Position above the "Go Top" button */
+    right: 20px;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.facebook-btn:hover {
+    background-color: #365899; /* Darker Facebook blue */
+    transform: scale(1.1);
+}
+
+.facebook-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+}
+
+
