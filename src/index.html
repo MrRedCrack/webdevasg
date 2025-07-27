@@ -123,12 +123,21 @@
     <div class="container-xl mt-5">
         <div class="col-md-8 mx-auto text-center">
             <h1 class="pt-4 mb-3 lh-1 croissant-one-regular">LittleStreets</h1>
-            <p class="lead mb-4"><svg class="bi me-3" width="20" height="20" fill="currentColor">
-                    <use href="bootstrap-icons.svg#fork-knife" />
-                </svg>Let's explore Malaysian street food!<svg class="bi ms-3" width="20" height="20"
-                    fill="currentColor">
-                    <use href="bootstrap-icons.svg#fork-knife" />
-                </svg></p>
+            <div class="d-flex justify-content-center align-items-center mb-5">
+                <div class="col me-2 text-end">
+                    <svg class="bi" width="20" height="20" fill="currentColor">
+                        <use href="bootstrap-icons.svg#fork-knife" />
+                    </svg>
+                </div>
+                <p class="lead col-6 m-0">
+                    Let's explore Malaysian street&nbsp;food!
+                </p>
+                <div class="col ms-2 text-start">
+                    <svg class="bi" width="20" height="20" fill="currentColor">
+                        <use href="bootstrap-icons.svg#fork-knife" />
+                    </svg>
+                </div>
+            </div>
         </div>
         <div id="frontCarousel" class="carousel slide col-md-10 mx-auto" data-bs-ride="true">
             <div class="carousel-indicators">
@@ -142,11 +151,13 @@
             <div class="carousel-inner mb-4 shadow">
                 <div class="carousel-item active">
                     <img src="img/malaysia-1.webp" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-sm-block">
+                    <div class="carousel-caption d-block">
                         <h2 class="fw-semibold text-dark">Malaysia</h2>
                         <figure class="text-center">
                             <blockquote class="blockquote">
-                                <h6 class="fw-normal text-dark">"Malaysia is a melting pot with a unique culture, a
+                                <h6 class="fw-normal text-dark d-none d-sm-block">"Malaysia is a melting pot with a
+                                    unique
+                                    culture, a
                                     <span class="fst-italic fw-semibold">
                                         world-renowned food scene
                                     </span> and a spectacular landscape of islands, ancient rainforest and mountains."
