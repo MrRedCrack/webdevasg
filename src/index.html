@@ -16,8 +16,8 @@
 </head>
 
 <body>
-    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
-        <div class="container-lg">
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary shadow">
+        <div class="container-xl">
             <a class="navbar-brand" href="index.html"><span class="croissant-one-regular">LittleStreets</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -120,7 +120,64 @@
             </div>
         </div>
     </nav>
-    <div class="container-lg">
+    <div class="container-xl mt-5">
+        <div class="col-md-8 mx-auto text-center">
+            <h1 class="pt-4 mb-3 lh-1 croissant-one-regular">LittleStreets</h1>
+            <p class="lead mb-4"><svg class="bi me-3" width="20" height="20" fill="currentColor">
+                    <use href="bootstrap-icons.svg#fork-knife" />
+                </svg>Let's explore Malaysian street food!<svg class="bi ms-3" width="20" height="20"
+                    fill="currentColor">
+                    <use href="bootstrap-icons.svg#fork-knife" />
+                </svg></p>
+        </div>
+        <div id="frontCarousel" class="carousel slide col-md-10 mx-auto" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner mb-4 shadow">
+                <div class="carousel-item active">
+                    <img src="img/malaysia-1.webp" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-sm-block">
+                        <h2 class="fw-semibold text-dark">Malaysia</h2>
+                        <figure class="text-center">
+                            <blockquote class="blockquote">
+                                <h6 class="fw-normal text-dark">"Malaysia is a melting pot with a unique culture, a
+                                    <span class="fst-italic fw-semibold">
+                                        world-renowned food scene
+                                    </span> and a spectacular landscape of islands, ancient rainforest and mountains."
+                                </h6>
+                            </blockquote>
+                            <figcaption class="blockquote-footer">
+                                <cite title="Source"><a
+                                        href="https://www.outlooktravelmag.com/travel-guides/74-malaysia"
+                                        title="Go to Source"
+                                        class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Outlook
+                                        Travel Magazine</a></cite>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#frontCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#frontCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">

@@ -3,7 +3,7 @@
 
 // Include any default variable overrides here (though functions won’t be available)
 
-$primary:green;
+$primary:orange;
 $offcanvas-horizontal-width: 200px;
 // $color: purple;
 
@@ -27,4 +27,8 @@ $bootstrap-icons-font-dir: "../node_modules/bootstrap-icons/font/fonts";
   position: fixed;
   bottom: 20px;
   right: 20px;
+}
+.carousel-caption {
+    top: 0.5em;
+    bottom: auto;
 }
