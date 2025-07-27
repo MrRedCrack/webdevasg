@@ -1,20 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="auto">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Basic Bootstrap Template</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="custom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="bootstrap.bundle.min.js"></script>
+    <script src="mode.js"></script>
 </head>
 
 <body>
-    <div class="container">
-
-        <i class="bi bi-alarm" style="font-size: 2rem;"></i>
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+        <div class="container-lg">
+            <a class="navbar-brand" href="index.html"><span class="croissant-one-regular">LittleStreets</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="navbarNav">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="#">Gallery</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Food
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <h6 class="dropdown-header">Malaysian Street Food</h6>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Nasi Lemak</a></li>
+                                <li><a class="dropdown-item" href="#">Satay</a></li>
+                                <li><a class="dropdown-item" href="#">Laksa</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="#">Locations</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                            <div class="vr d-none d-lg-flex h-100 mx-lg-2 opacity-25"></div>
+                            <hr class="d-lg-none my-2 opacity-25">
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button
+                                class="btn btn-link nav-link px-0 px-lg-2 py-2 dropdown-toggle d-flex align-items-center"
+                                id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                                data-bs-display="static" aria-label="Toggle theme (dark)">
+                                <svg class="bi my-1 theme-icon-active" aria-hidden="true" width="16" height="16"
+                                    fill="currentColor">
+                                    <use href="bootstrap-icons.svg#moon-stars-fill"></use>
+                                </svg>
+                                <span class="d-lg-none ms-2" id="bd-theme-text">Change Theme</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center"
+                                        data-bs-theme-value="light" aria-pressed="false">
+                                        <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#sun-fill"></use>
+                                        </svg>
+                                        Light
+                                        <svg class="bi ms-auto" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center active"
+                                        data-bs-theme-value="dark" aria-pressed="true">
+                                        <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#moon-stars-fill"></use>
+                                        </svg>
+                                        Dark
+                                        <svg class="bi ms-auto d-none" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center"
+                                        data-bs-theme-value="auto" aria-pressed="false">
+                                        <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#circle-half"></use>
+                                        </svg>
+                                        Auto
+                                        <svg class="bi ms-auto d-none" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-lg">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
@@ -22,25 +128,29 @@
                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Accordion #1
                         <svg class="bi" width="32" height="32" fill="currentColor">
-                            <use xlink:href="bootstrap-icons.svg#heart-fill" />
+                            <use href="bootstrap-icons.svg#heart-fill" />
                         </svg>
                         <svg class="bi" width="32" height="32" fill="currentColor">
-                            <use xlink:href="bootstrap-icons.svg#toggles" />
+                            <use href="bootstrap-icons.svg#toggles" />
                         </svg>
                         <svg class="bi" width="32" height="32" fill="currentColor">
-                            <use xlink:href="bootstrap-icons.svg#shop" />
+                            <use href="bootstrap-icons.svg#shop" />
                         </svg>AAA
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the first item’s accordion body.</strong> It is shown by default, until the
-                        collapse
-                        plugin adds the appropriate classes that we use to style each element. These classes control the
-                        overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
-                        this with custom CSS or overriding our default variables. It’s also worth noting that just about
-                        any
-                        HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <strong>This is the first item’s accordion
+                            body.</strong>
+                        It is shown by default, until the collapse plugin
+                        adds the appropriate classes that we use to style
+                        each element. These classes control the overall
+                        appearance, as well as the showing and hiding via
+                        CSS transitions. You can modify any of this with
+                        custom CSS or overriding our default variables. It’s
+                        also worth noting that just about any HTML can go
+                        within the <code>.accordion-body</code>, though the
+                        transition does limit overflow.
                     </div>
                 </div>
             </div>
@@ -53,14 +163,17 @@
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It’s also worth noting
-                        that
-                        just about any HTML can go within the <code>.accordion-body</code>, though the transition does
-                        limit
-                        overflow.
+                        <strong>This is the second item’s accordion
+                            body.</strong>
+                        It is hidden by default, until the collapse plugin
+                        adds the appropriate classes that we use to style
+                        each element. These classes control the overall
+                        appearance, as well as the showing and hiding via
+                        CSS transitions. You can modify any of this with
+                        custom CSS or overriding our default variables. It’s
+                        also worth noting that just about any HTML can go
+                        within the <code>.accordion-body</code>, though the
+                        transition does limit overflow.
                     </div>
                 </div>
             </div>
@@ -73,14 +186,17 @@
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It’s also worth noting
-                        that
-                        just about any HTML can go within the <code>.accordion-body</code>, though the transition does
-                        limit
-                        overflow.
+                        <strong>This is the third item’s accordion
+                            body.</strong>
+                        It is hidden by default, until the collapse plugin
+                        adds the appropriate classes that we use to style
+                        each element. These classes control the overall
+                        appearance, as well as the showing and hiding via
+                        CSS transitions. You can modify any of this with
+                        custom CSS or overriding our default variables. It’s
+                        also worth noting that just about any HTML can go
+                        within the <code>.accordion-body</code>, though the
+                        transition does limit overflow.
                     </div>
                 </div>
             </div>
@@ -93,12 +209,18 @@
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLight">
                 <li><a class="dropdown-item active" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
                 <li>
-                    <hr class="dropdown-divider">
+                    <a class="dropdown-item" href="#">Another action</a>
                 </li>
-                <li><a class="dropdown-item" href="#">Separated link</a></li>
+                <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider" />
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                </li>
             </ul>
         </div>
 
@@ -110,16 +232,68 @@
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonDark">
                 <li><a class="dropdown-item active" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
                 <li>
-                    <hr class="dropdown-divider">
+                    <a class="dropdown-item" href="#">Another action</a>
                 </li>
-                <li><a class="dropdown-item" href="#">Separated link</a></li>
+                <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider" />
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                </li>
             </ul>
         </div>
-    </div>
 
+        <strong>This is the third item’s accordion body.</strong> It is
+        hidden by default, until the collapse plugin adds the appropriate
+        classes that we use to style each element. These classes control the
+        overall appearance, as well as the showing and hiding via CSS
+        transitions. You can modify any of this with custom CSS or
+        overriding our default variables. It’s also worth noting that just
+        about any HTML can go within the <code>.accordion-body</code>,
+        though the transition does limit overflow.
+        <strong>This is the third item’s accordion body.</strong> It is
+        hidden by default, until the collapse plugin adds the appropriate
+        classes that we use to style each element. These classes control the
+        overall appearance, as well as the showing and hiding via CSS
+        transitions. You can modify any of this with custom CSS or
+        overriding our default variables. It’s also worth noting that just
+        about any HTML can go within the <code>.accordion-body</code>,
+        though the transition does limit overflow.
+        <strong>This is the third item’s accordion body.</strong> It is
+        hidden by default, until the collapse plugin adds the appropriate
+        classes that we use to style each element. These classes control the
+        overall appearance, as well as the showing and hiding via CSS
+        transitions. You can modify any of this with custom CSS or
+        overriding our default variables. It’s also worth noting that just
+        about any HTML can go within the <code>.accordion-body</code>,
+        though the transition does limit overflow.
+        <strong>This is the third item’s accordion body.</strong> It is
+        hidden by default, until the collapse plugin adds the appropriate
+        classes that we use to style each element. These classes control the
+        overall appearance, as well as the showing and hiding via CSS
+        transitions. You can modify any of this with custom CSS or
+        overriding our default variables. It’s also worth noting that just
+        about any HTML can go within the <code>.accordion-body</code>,
+        though the transition does limit overflow.
+    </div>
+    <figure class="text-center">
+        <blockquote class="blockquote">
+            <p>A well-known quote, contained in a blockquote element.</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+            Someone famous in <cite title="Source Title">Source Title</cite>
+        </figcaption>
+    </figure>
+    <button class="btn btn-warning btn-floating d-none" type="button" id="btn-back-to-top" title="Go to top">
+        <svg class="bi" width="16" height="16" fill="currentColor">
+            <use href="bootstrap-icons.svg#chevron-double-up" />
+        </svg>
+    </button>
+    <script src="totop.js"></script>
 </body>
 
 </html>

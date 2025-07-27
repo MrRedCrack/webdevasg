@@ -5,6 +5,7 @@
 
 $primary:green;
 // $color: purple;
+
 // Update the import directory to point to it‘s location within node_modules
 $bootstrap-icons-font-dir: "../node_modules/bootstrap-icons/font/fonts";
 
@@ -13,3 +14,16 @@ $bootstrap-icons-font-dir: "../node_modules/bootstrap-icons/font/fonts";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Then add additional custom code here
+.nav-link.active {
+  font-weight: 600;
+}
+.croissant-one-regular {
+  font-family: "Croissant One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
