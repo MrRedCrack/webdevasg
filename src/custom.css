@@ -20327,7 +20327,8 @@ textarea.form-control-lg {
   right: 20px;
   width: 2.5rem;
   height: 2.5rem;
-  display: flex; /* For centering content like icons */
+  display: flex;
+  /* For centering content like icons */
   justify-content: center;
   align-items: center;
 }
@@ -20353,16 +20354,48 @@ textarea.form-control-lg {
   /* Let the icon take whatever color the parent has. */
   fill: currentColor;
   /*
-   * If the icon is used on a link, which has a color transition,
-   * we can also transition the fill.
-  */
+     * If the icon is used on a link, which has a color transition,
+     * we can also transition the fill.
+    */
   transition: fill 0.3s;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
 }
 
 .link-primary {
   font-weight: 700;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.site-container {
+  overflow-y: hidden;
+  min-height: 100%;
+  min-width: 960px;
+}
+
+footer {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1019607843);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1019607843), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.1490196078);
+  padding-bottom: 32000px;
+  margin-bottom: -31940px;
 }

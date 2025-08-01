@@ -3,7 +3,7 @@
 
 // Include any default variable overrides here (though functions won’t be available)
 
-$primary:orange;
+$primary: orange;
 $offcanvas-horizontal-width: 200px;
 // $color: purple;
 
@@ -18,53 +18,90 @@ $bootstrap-icons-font-dir: "../node_modules/bootstrap-icons/font/fonts";
 .nav-link.active {
   font-weight: 600;
 }
+
 .croissant-one-regular {
   font-family: "Croissant One", serif;
   font-weight: 400;
   font-style: normal;
 }
+
 #btn-back-to-top {
   position: fixed;
   bottom: 30px;
   right: 20px;
   width: 2.5rem;
   height: 2.5rem;
-  display: flex; /* For centering content like icons */
+  display: flex;
+  /* For centering content like icons */
   justify-content: center;
   align-items: center;
 }
+
 .carousel-caption {
-    top: 0.5em;
-    bottom: auto;
+  top: 0.5em;
+  bottom: auto;
 }
+
 .img-showcase-front {
-  width:100%;
+  width: 100%;
 }
+
 .logo svg {
-    /* Place the icon on the text baseline. */
-    position: relative;
-    top: 0em;
+  /* Place the icon on the text baseline. */
+  position: relative;
+  top: 0em;
 
-    /* Prevent the icon from shrinking inside a flex container. */
-    flex-shrink: 0;
+  /* Prevent the icon from shrinking inside a flex container. */
+  flex-shrink: 0;
 
-    /* Scale the icon to match the font-size. */
-    height: 1em;
-    width: 1em;
+  /* Scale the icon to match the font-size. */
+  height: 1em;
+  width: 1em;
 
-    /* Let the icon take whatever color the parent has. */
-    fill: currentColor;
+  /* Let the icon take whatever color the parent has. */
+  fill: currentColor;
 
-    /*
+  /*
      * If the icon is used on a link, which has a color transition,
      * we can also transition the fill.
     */
-   transition: fill .3s;
+  transition: fill .3s;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif
+    /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+  ;
 }
+
 .link-primary {
   // text-shadow: 0px 0px 5px #ededed;
-  font-weight:700;
+  font-weight: 700;
+}
+
+html,
+body {
+  height: 100%
+}
+
+.site-container {
+  overflow-y: hidden;
+  min-height: 100%;
+  min-width: 960px;
+}
+
+footer {
+  width: 100%;
+  height: 3rem;
+  background-color: #0000001a;
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026;
+  padding-bottom: 32000px;
+  margin-bottom: -31940px;
 }
