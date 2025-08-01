@@ -24,121 +24,237 @@
 </head>
 
 <body>
-    <div class="site-container">
-        <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary shadow">
-            <div class="container-xl">
-                <a class="navbar-brand logo" href="index.html">
-                    <span class="croissant-one-regular">LittleStreets</span><svg class="bi">
-                        <use href="bootstrap-icons.svg#fork-knife" />
-                    </svg>
-                </a>
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <svg class="bi text-body" width="1.5em" height="1.5em" fill="currentColor">
-                        <use href="bootstrap-icons.svg#three-dots-vertical" />
-                    </svg>
-                </button>
-                <div class="offcanvas offcanvas-end" id="navbarNav">
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav nav-masthead flex-row flex-wrap ms-md-auto">
-                            <li class="nav-item col-12 col-lg-auto">
-                                <a class="nav-link" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item col-12 col-lg-auto">
-                                <a class="nav-link" href="gallery.html">Gallery</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Food
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <li>
-                                        <p class="dropdown-header">Highlights</p>
-                                    </li>
-                                    <li><a class="dropdown-item" href="nasi-lemak.html">Nasi Lemak</a></li>
-                                    <li><a class="dropdown-item" href="satay.html">Satay</a></li>
-                                    <li><a class="dropdown-item" href="laksa.html">Laksa</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item col-12 col-lg-auto">
-                                <a class="nav-link" href="locations.html">Locations</a>
-                            </li>
-                            <li class="nav-item col-12 col-lg-auto">
-                                <a class="nav-link active" aria-current="page" href="about.html">About</a>
-                            </li>
-                            <li class="nav-item col-12 col-lg-auto">
-                                <a class="nav-link" href="contact.html">Contact</a>
-                            </li>
-                            <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
-                                <div class="vr d-none d-lg-flex h-100 mx-lg-2 opacity-25"></div>
-                                <hr class="d-lg-none my-2 opacity-25">
-                            </li>
-                            <li class="nav-item dropdown">
-                                <button
-                                    class="btn btn-link nav-link px-0 px-lg-2 py-2 dropdown-toggle d-flex align-items-center"
-                                    id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
-                                    data-bs-display="static" aria-label="Toggle theme (dark)">
-                                    <svg class="bi my-1 theme-icon-active" aria-hidden="true" width="16" height="16"
-                                        fill="currentColor">
-                                        <use href="bootstrap-icons.svg#moon-stars-fill"></use>
-                                    </svg>
-                                    <span class="d-lg-none ms-2" id="bd-theme-text">Change Theme</span>
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
-                                    <li>
-                                        <button type="button" class="dropdown-item d-flex align-items-center"
-                                            data-bs-theme-value="light" aria-pressed="false">
-                                            <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
-                                                fill="currentColor">
-                                                <use href="bootstrap-icons.svg#sun-fill"></use>
-                                            </svg>
-                                            Light
-                                            <svg class="bi ms-auto" aria-hidden="true" width="16" height="16"
-                                                fill="currentColor">
-                                                <use href="bootstrap-icons.svg#check2"></use>
-                                            </svg>
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button type="button" class="dropdown-item d-flex align-items-center active"
-                                            data-bs-theme-value="dark" aria-pressed="true">
-                                            <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
-                                                fill="currentColor">
-                                                <use href="bootstrap-icons.svg#moon-stars-fill"></use>
-                                            </svg>
-                                            Dark
-                                            <svg class="bi ms-auto d-none" aria-hidden="true" width="16" height="16"
-                                                fill="currentColor">
-                                                <use href="bootstrap-icons.svg#check2"></use>
-                                            </svg>
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button type="button" class="dropdown-item d-flex align-items-center"
-                                            data-bs-theme-value="auto" aria-pressed="false">
-                                            <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
-                                                fill="currentColor">
-                                                <use href="bootstrap-icons.svg#circle-half"></use>
-                                            </svg>
-                                            Auto
-                                            <svg class="bi ms-auto d-none" aria-hidden="true" width="16" height="16"
-                                                fill="currentColor">
-                                                <use href="bootstrap-icons.svg#check2"></use>
-                                            </svg>
-                                        </button>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary shadow">
+        <div class="container-xl">
+            <a class="navbar-brand logo" href="index.html">
+                <span class="croissant-one-regular">LittleStreets</span><svg class="bi">
+                    <use href="bootstrap-icons.svg#fork-knife" />
+                </svg>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="bi text-body" width="1.5em" height="1.5em" fill="currentColor">
+                    <use href="bootstrap-icons.svg#three-dots-vertical" />
+                </svg>
+            </button>
+            <div class="offcanvas offcanvas-end" id="navbarNav">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav nav-masthead flex-row flex-wrap ms-md-auto">
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Food
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <p class="dropdown-header">Highlights</p>
+                                </li>
+                                <li><a class="dropdown-item" href="nasi-lemak.html">Nasi Lemak</a></li>
+                                <li><a class="dropdown-item" href="satay.html">Satay</a></li>
+                                <li><a class="dropdown-item" href="laksa.html">Laksa</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="locations.html">Locations</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                            <div class="vr d-none d-lg-flex h-100 mx-lg-2 opacity-25"></div>
+                            <hr class="d-lg-none my-2 opacity-25">
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button
+                                class="btn btn-link nav-link px-0 px-lg-2 py-2 dropdown-toggle d-flex align-items-center"
+                                id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                                data-bs-display="static" aria-label="Toggle theme (dark)">
+                                <svg class="bi my-1 theme-icon-active" aria-hidden="true" width="16" height="16"
+                                    fill="currentColor">
+                                    <use href="bootstrap-icons.svg#moon-stars-fill"></use>
+                                </svg>
+                                <span class="d-lg-none ms-2" id="bd-theme-text">Change Theme</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center"
+                                        data-bs-theme-value="light" aria-pressed="false">
+                                        <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#sun-fill"></use>
+                                        </svg>
+                                        Light
+                                        <svg class="bi ms-auto" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center active"
+                                        data-bs-theme-value="dark" aria-pressed="true">
+                                        <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#moon-stars-fill"></use>
+                                        </svg>
+                                        Dark
+                                        <svg class="bi ms-auto d-none" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center"
+                                        data-bs-theme-value="auto" aria-pressed="false">
+                                        <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#circle-half"></use>
+                                        </svg>
+                                        Auto
+                                        <svg class="bi ms-auto d-none" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
+    <div class="site-container">
+        <div class="pt-5"></div>
         <div class="container-xl mt-5">
             <main class="px-3">
                 <!-- main content here -->
+                <h2 class="pb-2 border-bottom">Website Development Team: CT Group 1</h2>
+                <div class="row g-3 py-5 row-cols-1 row-cols-md-2 row-cols-lg-4">
+                    <div class="col-3">
+                        <div
+                            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                            <svg class="bi" width="1em" height="1em" aria-hidden="true">
+                                <use xlink:href="#collection"></use>
+                            </svg>
+                        </div>
+                        <h3 class="fs-2 text-body-emphasis">Wah Teck Chun</h3>
+                        <p class="lead fst-italic">Leader</p>
+                        <code>Programme: CT<br>
+                            ID: 2207655<br>
+                            Practical: P7
+                        </code>
+                        <p class="pt-3">Site contributions:<br>
+                            <a href="#" class="icon-link">
+                                link1
+                                <svg class="bi" aria-hidden="true">
+                                    <use href="bootstrap-icons.svg#chevron-right"></use>
+                                </svg>
+                            </a><br>
+                            <a href="#" class="icon-link">
+                                link2
+                                <svg class="bi" aria-hidden="true">
+                                    <use href="bootstrap-icons.svg#chevron-right"></use>
+                                </svg>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-3">
+                        <div
+                            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                            <svg class="bi" width="1em" height="1em" aria-hidden="true">
+                                <use xlink:href="#collection"></use>
+                            </svg>
+                        </div>
+                        <h3 class="fs-2 text-body-emphasis">Chuah Kai Shen</h3>
+                        <p class="lead fst-italic">Member</p>
+                        <code>Programme: CT<br>
+                            ID: 2206895<br>
+                            Practical: P7
+                        </code>
+                        <p class="pt-3">Site contributions:<br>
+                            <a href="#" class="icon-link">
+                                link1
+                                <svg class="bi" aria-hidden="true">
+                                    <use href="bootstrap-icons.svg#chevron-right"></use>
+                                </svg>
+                            </a><br>
+                            <a href="#" class="icon-link">
+                                link2
+                                <svg class="bi" aria-hidden="true">
+                                    <use href="bootstrap-icons.svg#chevron-right"></use>
+                                </svg>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-3">
+                        <div
+                            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                            <svg class="bi" width="1em" height="1em" aria-hidden="true">
+                                <use xlink:href="#collection"></use>
+                            </svg>
+                        </div>
+                        <h3 class="fs-2 text-body-emphasis">Tam Kai Yuan</h3>
+                        <p class="lead fst-italic">Member</p>
+                        <code>Programme: CT<br>
+                            ID: 2103376<br>
+                            Practical: P23
+                        </code>
+                        <p class="pt-3">Site contributions:<br>
+                            <a href="#" class="icon-link">
+                                link1
+                                <svg class="bi" aria-hidden="true">
+                                    <use href="bootstrap-icons.svg#chevron-right"></use>
+                                </svg>
+                            </a><br>
+                            <a href="#" class="icon-link">
+                                link2
+                                <svg class="bi" aria-hidden="true">
+                                    <use href="bootstrap-icons.svg#chevron-right"></use>
+                                </svg>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-3">
+                        <div
+                            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                            <svg class="bi" width="1em" height="1em" aria-hidden="true">
+                                <use xlink:href="#collection"></use>
+                            </svg>
+                        </div>
+                        <h3 class="fs-2 text-body-emphasis">Tiu Wei Heng</h3>
+                        <p class="lead fst-italic">Member</p>
+                        <code>Programme: CT<br>
+                            ID: 2200930<br>
+                            Practical: P7
+                        </code>
+                        <p class="pt-3">Site contributions:<br>
+                            <a href="#" class="icon-link">
+                                link1
+                                <svg class="bi" aria-hidden="true">
+                                    <use href="bootstrap-icons.svg#chevron-right"></use>
+                                </svg>
+                            </a><br>
+                            <a href="#" class="icon-link">
+                                link2
+                                <svg class="bi" aria-hidden="true">
+                                    <use href="bootstrap-icons.svg#chevron-right"></use>
+                                </svg>
+                            </a>
+                        </p>
+                    </div>
+                </div>
             </main>
         </div>
         <footer class="mt-5 fs-6 fw-light text-center">
