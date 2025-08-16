@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LittleStreets</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="LittleStreets">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="custom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Croissant+One&&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="mode.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary shadow">
+        <div class="container-xl">
+            <a class="navbar-brand logo" href="index.html">
+                <span class="croissant-one-regular">LittleStreets</span><svg class="bi">
+                    <use href="bootstrap-icons.svg#fork-knife" />
+                </svg>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="bi text-body" width="1.5em" height="1.5em" fill="currentColor">
+                    <use href="bootstrap-icons.svg#three-dots-vertical" />
+                </svg>
+            </button>
+            <div class="offcanvas offcanvas-end" id="navbarNav">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav nav-masthead flex-row flex-wrap ms-md-auto">
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Food
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <p class="dropdown-header">Highlights</p>
+                                </li>
+                                <li><a class="dropdown-item" href="nasi-lemak.html">Nasi Lemak</a></li>
+                                <li><a class="dropdown-item" href="satay.html">Satay</a></li>
+                                <li><a class="dropdown-item active" href="laksa.html">Laksa</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="locations.html">Locations</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                            <div class="vr d-none d-lg-flex h-100 mx-lg-2 opacity-25"></div>
+                            <hr class="d-lg-none my-2 opacity-25">
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button
+                                class="btn btn-link nav-link px-0 px-lg-2 py-2 dropdown-toggle d-flex align-items-center"
+                                id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                                data-bs-display="static" aria-label="Toggle theme (dark)">
+                                <svg class="bi my-1 theme-icon-active" aria-hidden="true" width="16" height="16"
+                                    fill="currentColor">
+                                    <use href="bootstrap-icons.svg#moon-stars-fill"></use>
+                                </svg>
+                                <span class="d-lg-none ms-2" id="bd-theme-text">Change Theme</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center"
+                                        data-bs-theme-value="light" aria-pressed="false">
+                                        <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#sun-fill"></use>
+                                        </svg>
+                                        Light
+                                        <svg class="bi ms-auto" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center active"
+                                        data-bs-theme-value="dark" aria-pressed="true">
+                                        <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#moon-stars-fill"></use>
+                                        </svg>
+                                        Dark
+                                        <svg class="bi ms-auto d-none" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center"
+                                        data-bs-theme-value="auto" aria-pressed="false">
+                                        <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#circle-half"></use>
+                                        </svg>
+                                        Auto
+                                        <svg class="bi ms-auto d-none" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="site-container">
+        <div class="pt-5"></div>
+        <div class="container-xl mt-5">
+            <main class="px-3">
+                <!-- Laksa Section -->
+                <section class="text-center mb-5">
+                    <h1 class="fw-bold">Laksa – Malaysia’s Spicy and Aromatic Noodle Soup</h1>
+                    <p class="text-muted">A flavorful fusion of coconut, spices, and noodles.</p>
+
+                    <div class="container" style="max-width: 800px;">
+                        <div id="laksaCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/laksa1.jpg" class="d-block w-100 img-fluid" alt="Laksa Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/laksa2.jpg" class="d-block w-100 img-fluid" alt="Laksa Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/laksa3.jpg" class="d-block w-100 img-fluid" alt="Laksa Image 3">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#laksaCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#laksaCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#laksaCarousel" data-bs-slide-to="0"
+                                    class="active"></button>
+                                <button type="button" data-bs-target="#laksaCarousel" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#laksaCarousel" data-bs-slide-to="2"></button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- Introduction -->
+                <section class="mb-5">
+                    <h2>Introduction</h2>
+                    <p>Laksa is a beloved Malaysian street food — a spicy noodle soup combining creamy coconut milk,
+                        aromatic spices, and fresh herbs. Served with rice noodles or vermicelli, tender chicken or
+                        prawns, bean sprouts, and a squeeze of lime, Laksa offers a perfect balance of savory, tangy,
+                        and spicy flavors.</p>
+                </section>
+
+                <!-- History & Culture -->
+                <section class="mb-5">
+                    <h2>History & Cultural Significance</h2>
+                    <p>Laksa’s origins can be traced to the Peranakan culture, a blend of Chinese and Malay heritage.
+                        Over time, different regions in Malaysia have developed their own versions — from the rich,
+                        coconut-based curry laksa of the west coast to the tangy, tamarind-infused asam laksa of Penang.
+                        It remains a symbol of cultural fusion and comfort food for many Malaysians.</p>
+                </section>
+
+                <!-- Ingredients Table -->
+                <section class="mb-5">
+                    <h2>Key Ingredients</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Ingredient</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Rice Noodles / Vermicelli</td>
+                                <td>Main carbohydrate base of the soup</td>
+                            </tr>
+                            <tr>
+                                <td>Coconut Milk</td>
+                                <td>Creates the creamy, rich broth</td>
+                            </tr>
+                            <tr>
+                                <td>Laksa Paste</td>
+                                <td>Blend of spices, chili, lemongrass, and shrimp paste</td>
+                            </tr>
+                            <tr>
+                                <td>Prawns / Chicken</td>
+                                <td>Common protein choices for laksa</td>
+                            </tr>
+                            <tr>
+                                <td>Bean Sprouts & Fresh Herbs</td>
+                                <td>Add crunch and freshness to the dish</td>
+                            </tr>
+                            <tr>
+                                <td>Lime & Sambal</td>
+                                <td>Provide acidity and extra heat</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Cooking Steps -->
+                <section class="mb-5">
+                    <h2>How to Make Laksa</h2>
+                    <ol>
+                        <li>Boil noodles or vermicelli until cooked, then set aside.</li>
+                        <li>Heat oil in a pot, add laksa paste, and fry until fragrant.</li>
+                        <li>Pour in coconut milk and chicken or seafood stock, bringing to a gentle simmer.</li>
+                        <li>Add prawns, chicken, or tofu, and cook until done.</li>
+                        <li>Assemble by placing noodles in a bowl, ladling hot broth over, and topping with bean
+                            sprouts, herbs, lime, and sambal.</li>
+                    </ol>
+                </section>
+
+                <!-- Fun Facts -->
+                <section class="mb-5">
+                    <h2>Fun Facts</h2>
+                    <ul>
+                        <li>Penang Asam Laksa was ranked 7th in CNN Travel’s “World’s 50 Best Foods” in 2011.</li>
+                        <li>There are over 10 regional variations of Laksa across Malaysia.</li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+        <footer class="mt-5 fs-6 fw-light text-center">
+            <div class="d-flex py-3 px-5 align-content-center justify-content-center">
+                <p class="text-center">Malaysian street food showcase website, by <a href="about.html"
+                        class="link-info">CT&nbsp;Group&nbsp;1</a>.
+                </p>
+            </div>
+        </footer>
+    </div>
+    <button class="btn btn-warning shadow rounded-circle d-none" type="button" id="btn-back-to-top" title="Go to top">
+        <svg class="bi" width="18" height="18" fill="currentColor">
+            <use href="bootstrap-icons.svg#chevron-double-up" />
+        </svg>
+    </button>
+    <script src="totop.js"></script>
+</body>
+
+</html>

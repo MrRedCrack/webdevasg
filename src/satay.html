@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LittleStreets</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="LittleStreets">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="custom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Croissant+One&&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="mode.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary shadow">
+        <div class="container-xl">
+            <a class="navbar-brand logo" href="index.html">
+                <span class="croissant-one-regular">LittleStreets</span><svg class="bi">
+                    <use href="bootstrap-icons.svg#fork-knife" />
+                </svg>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="bi text-body" width="1.5em" height="1.5em" fill="currentColor">
+                    <use href="bootstrap-icons.svg#three-dots-vertical" />
+                </svg>
+            </button>
+            <div class="offcanvas offcanvas-end" id="navbarNav">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav nav-masthead flex-row flex-wrap ms-md-auto">
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Food
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <p class="dropdown-header">Highlights</p>
+                                </li>
+                                <li><a class="dropdown-item" href="nasi-lemak.html">Nasi Lemak</a></li>
+                                <li><a class="dropdown-item active" href="satay.html">Satay</a></li>
+                                <li><a class="dropdown-item" href="laksa.html">Laksa</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="locations.html">Locations</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                            <div class="vr d-none d-lg-flex h-100 mx-lg-2 opacity-25"></div>
+                            <hr class="d-lg-none my-2 opacity-25">
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button
+                                class="btn btn-link nav-link px-0 px-lg-2 py-2 dropdown-toggle d-flex align-items-center"
+                                id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                                data-bs-display="static" aria-label="Toggle theme (dark)">
+                                <svg class="bi my-1 theme-icon-active" aria-hidden="true" width="16" height="16"
+                                    fill="currentColor">
+                                    <use href="bootstrap-icons.svg#moon-stars-fill"></use>
+                                </svg>
+                                <span class="d-lg-none ms-2" id="bd-theme-text">Change Theme</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center"
+                                        data-bs-theme-value="light" aria-pressed="false">
+                                        <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#sun-fill"></use>
+                                        </svg>
+                                        Light
+                                        <svg class="bi ms-auto" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center active"
+                                        data-bs-theme-value="dark" aria-pressed="true">
+                                        <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#moon-stars-fill"></use>
+                                        </svg>
+                                        Dark
+                                        <svg class="bi ms-auto d-none" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center"
+                                        data-bs-theme-value="auto" aria-pressed="false">
+                                        <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#circle-half"></use>
+                                        </svg>
+                                        Auto
+                                        <svg class="bi ms-auto d-none" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="site-container">
+        <div class="pt-5"></div>
+        <div class="container-xl mt-5">
+            <main class="px-3">
+                <!-- Satay Section -->
+                <section class="text-center mb-5">
+                    <h1 class="fw-bold">Satay – Malaysia’s Grilled Meat Skewers</h1>
+                    <p class="text-muted">Tender, juicy skewers served with peanut sauce.</p>
+
+                    <div class="container" style="max-width: 800px;">
+                        <div id="satayCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/satay1.jpg" class="d-block w-100 img-fluid" alt="Satay Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/satay2.jpg" class="d-block w-100 img-fluid" alt="Satay Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/satay3.jpg" class="d-block w-100 img-fluid" alt="Satay Image 3">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#satayCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#satayCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#satayCarousel" data-bs-slide-to="0"
+                                    class="active"></button>
+                                <button type="button" data-bs-target="#satayCarousel" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#satayCarousel" data-bs-slide-to="2"></button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Introduction -->
+                <section class="mb-5">
+                    <h2>Introduction</h2>
+                    <p>Satay is one of Malaysia’s most beloved street foods — marinated meat skewers grilled over
+                        charcoal and served with a rich peanut sauce, fresh cucumber, onions, and compressed rice cakes
+                        known as ketupat. More than just a meal, Satay is a social tradition found in night markets,
+                        family gatherings, and festive celebrations.</p>
+                </section>
+
+                <!-- History & Culture -->
+                <section class="mb-5">
+                    <h2>History & Cultural Significance</h2>
+                    <p>Originating from Java, Indonesia, Satay was brought to Malaysia through migration and cultural
+                        exchange, evolving with unique local flavors. In Malaysia, Satay is a must-have dish during
+                        festive nights, Ramadan bazaars, and family BBQ parties.</p>
+                </section>
+
+                <!-- Ingredients Table -->
+                <section class="mb-5">
+                    <h2>Key Ingredients</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Ingredient</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Chicken / Beef / Lamb</td>
+                                <td>Main protein for the skewers</td>
+                            </tr>
+                            <tr>
+                                <td>Peanuts</td>
+                                <td>For the rich, savory peanut sauce</td>
+                            </tr>
+                            <tr>
+                                <td>Lemongrass & Turmeric Powder</td>
+                                <td>Key flavors in the marinade</td>
+                            </tr>
+                            <tr>
+                                <td>Cucumber & Onions</td>
+                                <td>Refreshing sides to balance the richness</td>
+                            </tr>
+                            <tr>
+                                <td>Ketupat (Rice Cake)</td>
+                                <td>Traditional side dish for Satay</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Cooking Steps -->
+                <section class="mb-5">
+                    <h2>How to Make Satay</h2>
+                    <ol>
+                        <li>Cut meat into small cubes and marinate with lemongrass, turmeric, sugar, and salt for 2–4
+                            hours.</li>
+                        <li>Skewer the marinated meat onto bamboo sticks.</li>
+                        <li>Grill over charcoal, turning frequently until golden brown.</li>
+                        <li>Prepare peanut sauce by blending roasted peanuts with chili paste, coconut milk, and sugar.
+                        </li>
+                        <li>Serve hot with peanut sauce, cucumber, onions, and ketupat.</li>
+                    </ol>
+                </section>
+
+                <!-- Fun Facts -->
+                <section class="mb-5">
+                    <h2>Fun Facts</h2>
+                    <ul>
+                        <li>Satay was listed in CNN Travel’s “World’s 50 Best Foods” in 2011.</li>
+                        <li>Traditional Satay is always cooked over charcoal for that smoky aroma.</li>
+                    </ul>
+                </section>
+            </main>
+
+        </div>
+        <footer class="mt-5 fs-6 fw-light text-center">
+            <div class="d-flex py-3 px-5 align-content-center justify-content-center">
+                <p class="text-center">Malaysian street food showcase website, by <a href="about.html"
+                        class="link-info">CT&nbsp;Group&nbsp;1</a>.
+                </p>
+            </div>
+        </footer>
+    </div>
+    <button class="btn btn-warning shadow rounded-circle d-none" type="button" id="btn-back-to-top" title="Go to top">
+        <svg class="bi" width="18" height="18" fill="currentColor">
+            <use href="bootstrap-icons.svg#chevron-double-up" />
+        </svg>
+    </button>
+    <script src="totop.js"></script>
+</body>
+
+</html>
