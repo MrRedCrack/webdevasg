@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LittleStreets | Nasi Lemak</title>
+
+  <!-- favicons -->
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <!-- fonts & styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Croissant+One&&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="custom.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- scripts -->
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="mode.js"></script>
+</head>
+<body>
+
+  <!-- Navbar (matches site; optional “active” on Food>Nasi Lemak) -->
+  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary shadow">
+    <div class="container-xl">
+      <a class="navbar-brand logo" href="index.html">
+        <span class="croissant-one-regular">LittleStreets</span>
+        <svg class="bi"><use href="bootstrap-icons.svg#fork-knife"/></svg>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <svg class="bi text-body" width="1.5em" height="1.5em" fill="currentColor"><use href="bootstrap-icons.svg#three-dots-vertical"/></svg>
+      </button>
+
+      <div class="offcanvas offcanvas-end" id="navbarNav">
+        <div class="offcanvas-body">
+          <ul class="navbar-nav nav-masthead flex-row flex-wrap ms-md-auto">
+            <li class="nav-item col-12 col-lg-auto"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item col-12 col-lg-auto"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown">Food</a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><p class="dropdown-header">Highlights</p></li>
+                <li><a class="dropdown-item active" aria-current="page" href="nasi-lemak.html">Nasi Lemak</a></li>
+                <li><a class="dropdown-item" href="satay.html">Satay</a></li>
+                <li><a class="dropdown-item" href="laksa.html">Laksa</a></li>
+              </ul>
+            </li>
+            <li class="nav-item col-12 col-lg-auto"><a class="nav-link" href="locations.html">Locations</a></li>
+            <li class="nav-item col-12 col-lg-auto"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item col-12 col-lg-auto"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+              <div class="vr d-none d-lg-flex h-100 mx-lg-2 opacity-25"></div>
+              <hr class="d-lg-none my-2 opacity-25">
+            </li>
+            <!-- theme switcher -->
+            <li class="nav-item dropdown">
+              <button class="btn btn-link nav-link px-0 px-lg-2 py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" data-bs-toggle="dropdown" data-bs-display="static">
+                <svg class="bi my-1 theme-icon-active" aria-hidden="true" width="16" height="16" fill="currentColor">
+                  <use href="bootstrap-icons.svg#moon-stars-fill"></use>
+                </svg>
+                <span class="d-lg-none ms-2" id="bd-theme-text">Change Theme</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"><svg class="bi me-2 opacity-50" width="16" height="16"><use href="bootstrap-icons.svg#sun-fill"></use></svg>Light<svg class="bi ms-auto" width="16" height="16"><use href="bootstrap-icons.svg#check2"></use></svg></button></li>
+                <li><button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark"><svg class="bi me-2 opacity-50" width="16" height="16"><use href="bootstrap-icons.svg#moon-stars-fill"></use></svg>Dark<svg class="bi ms-auto d-none" width="16" height="16"><use href="bootstrap-icons.svg#check2"></use></svg></button></li>
+                <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto"><svg class="bi me-2 opacity-50" width="16" height="16"><use href="bootstrap-icons.svg#circle-half"></use></svg>Auto<svg class="bi ms-auto d-none" width="16" height="16"><use href="bootstrap-icons.svg#check2"></use></svg></button></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="site-container">
+    <div class="pt-5"></div>
+    <div class="container-xl mt-5">
+      <main class="px-3">
+
+        <!-- Hero / Carousel (pattern reused from Laksa page) -->
+        <section class="text-center mb-5">
+          <h1 class="fw-bold">Nasi Lemak – Malaysia’s Iconic Coconut Rice</h1>
+          <p class="text-muted">Fragrant rice cooked in coconut milk, served with spicy sambal and classic sides.</p>
+
+          <div class="container" style="max-width: 800px;">
+            <div id="nasiCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/nasi-lemak-1.webp" class="d-block w-100 img-fluid" alt="Nasi Lemak plate with sambal">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/nasi-lemak-2.jpg" class="d-block w-100 img-fluid" alt="Close-up of Nasi Lemak ingredients">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/nasi-lemak-3.jpg" class="d-block w-100 img-fluid" alt="Nasi Lemak wrapped in banana leaf">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#nasiCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#nasiCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#nasiCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#nasiCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#nasiCarousel" data-bs-slide-to="2"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Intro -->
+        <section class="mb-5">
+          <h2>Introduction</h2>
+          <p>Nasi Lemak is widely regarded as Malaysia’s national dish. The star is the aromatic rice, gently simmered with coconut milk and pandan leaves. It is traditionally served with a spicy <em>sambal</em>, crispy fried anchovies, roasted peanuts, sliced cucumber, and a hard-boiled or fried egg. Optional sides such as fried chicken, rendang, or squid elevate it into a full meal.</p>
+        </section>
+
+        <!-- Ingredients -->
+        <section class="mb-5">
+          <h2>Main Ingredients</h2>
+          <table class="table table-striped">
+            <thead><tr><th>Ingredient</th><th>Role</th></tr></thead>
+            <tbody>
+              <tr><td>Rice + Coconut Milk</td><td>Creates the signature fragrance and richness</td></tr>
+              <tr><td>Pandan Leaves</td><td>Infuse floral aroma into the rice</td></tr>
+              <tr><td>Sambal</td><td>Chili paste providing heat, sweetness, and umami</td></tr>
+              <tr><td>Ikan Bilis &amp; Peanuts</td><td>Crunchy, salty contrast</td></tr>
+              <tr><td>Cucumber</td><td>Freshness to balance the spice</td></tr>
+              <tr><td>Egg</td><td>Additional protein and creaminess</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- History & Culture -->
+        <section class="mb-5">
+          <h2>History &amp; Cultural Significance</h2>
+          <p>Originating from Malay communities, Nasi Lemak began as a farmer’s breakfast and evolved into a beloved all-day meal found at roadside stalls, markets, school canteens, and modern cafés. It symbolizes comfort, affordability, and the multicultural spirit of Malaysian street food.</p>
+        </section>
+
+        <!-- How to Make -->
+        <section class="mb-5">
+          <h2>How to Make Nasi Lemak (At a Glance)</h2>
+          <ol>
+            <li>Rinse rice; cook with coconut milk, water, salt, ginger, and pandan until fluffy.</li>
+            <li>Simmer sambal by frying blended chilies, onions, and belacan; season with sugar and tamarind.</li>
+            <li>Fry anchovies until crisp; roast peanuts lightly.</li>
+            <li>Assemble with cucumber slices and egg; add optional fried chicken or rendang.</li>
+          </ol>
+        </section>
+
+        <!-- Fun facts -->
+        <section class="mb-5">
+          <h2>Fun Facts</h2>
+          <ul>
+            <li>Banana-leaf wrapping not only looks authentic — it subtly perfumes the rice.</li>
+            <li>Breakfast classic, midnight supper, or festive platter: it fits every occasion.</li>
+          </ul>
+        </section>
+
+      </main>
+    </div>
+
+    <footer class="mt-5 fs-6 fw-light text-center">
+      <div class="d-flex py-3 px-5 align-content-center justify-content-center">
+        <p class="text-center">Malaysian street food showcase website, by
+          <a href="about.html" class="link-info">CT&nbsp;Group&nbsp;1</a>.
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <button class="btn btn-warning shadow rounded-circle d-none" type="button" id="btn-back-to-top" title="Go to top">
+    <svg class="bi" width="18" height="18"><use href="bootstrap-icons.svg#chevron-double-up"/></svg>
+  </button>
+  <script src="totop.js"></script>
+</body>
+</html>

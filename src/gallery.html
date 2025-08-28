@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LittleStreets</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="LittleStreets">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="custom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Croissant+One&&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="mode.js"></script>
+
+    <style>
+        body::before{
+        content:"";position:fixed;inset:0;z-index:-1;
+        background: radial-gradient(1200px 600px at 10% -10%, rgba(255,200,100,.25), transparent 60%),
+                    radial-gradient(900px 500px at 110% 10%, rgba(100,200,255,.22), transparent 60%),
+                    radial-gradient(800px 600px at 50% 120%, rgba(255,120,180,.18), transparent 60%);
+        filter: blur(20px);
+        }
+        
+        .gallery-card{
+        border:0;overflow:hidden;border-radius:18px;
+        box-shadow:0 12px 28px rgba(0,0,0,.15);
+        transition: transform .3s ease;
+        }
+
+        .gallery-card:hover{ transform:translateY(-5px); }
+        .gallery-card img{ height:220px;object-fit:cover;transition: transform .5s ease; }
+        .gallery-card:hover img{ transform:scale(1.05); }
+        .card-body{ text-align:center; }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary shadow">
+        <div class="container-xl">
+            <a class="navbar-brand logo" href="index.html">
+                <span class="croissant-one-regular">LittleStreets</span><svg class="bi">
+                    <use href="bootstrap-icons.svg#fork-knife" />
+                </svg>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="bi text-body" width="1.5em" height="1.5em" fill="currentColor">
+                    <use href="bootstrap-icons.svg#three-dots-vertical" />
+                </svg>
+            </button>
+            <div class="offcanvas offcanvas-end" id="navbarNav">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav nav-masthead flex-row flex-wrap ms-md-auto">
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Food
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <p class="dropdown-header">Highlights</p>
+                                </li>
+                                <li><a class="dropdown-item" href="nasi-lemak.html">Nasi Lemak</a></li>
+                                <li><a class="dropdown-item" href="satay.html">Satay</a></li>
+                                <li><a class="dropdown-item" href="laksa.html">Laksa</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="locations.html">Locations</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-auto">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                            <div class="vr d-none d-lg-flex h-100 mx-lg-2 opacity-25"></div>
+                            <hr class="d-lg-none my-2 opacity-25">
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button
+                                class="btn btn-link nav-link px-0 px-lg-2 py-2 dropdown-toggle d-flex align-items-center"
+                                id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                                data-bs-display="static" aria-label="Toggle theme (dark)">
+                                <svg class="bi my-1 theme-icon-active" aria-hidden="true" width="16" height="16"
+                                    fill="currentColor">
+                                    <use href="bootstrap-icons.svg#moon-stars-fill"></use>
+                                </svg>
+                                <span class="d-lg-none ms-2" id="bd-theme-text">Change Theme</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center"
+                                        data-bs-theme-value="light" aria-pressed="false">
+                                        <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#sun-fill"></use>
+                                        </svg>
+                                        Light
+                                        <svg class="bi ms-auto" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center active"
+                                        data-bs-theme-value="dark" aria-pressed="true">
+                                        <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#moon-stars-fill"></use>
+                                        </svg>
+                                        Dark
+                                        <svg class="bi ms-auto d-none" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center"
+                                        data-bs-theme-value="auto" aria-pressed="false">
+                                        <svg class="bi me-2 opacity-50" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#circle-half"></use>
+                                        </svg>
+                                        Auto
+                                        <svg class="bi ms-auto d-none" aria-hidden="true" width="16" height="16"
+                                            fill="currentColor">
+                                            <use href="bootstrap-icons.svg#check2"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+      <div class="site-container">
+    <div class="pt-5"></div>
+    <div class="container-xl mt-5">
+      <header class="text-center mb-5">
+        <h1 class="fw-bold">Food Gallery</h1>
+        <p class="text-muted">Click a food to open its detail page.</p>
+      </header>
+
+      <main>
+        <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-3">
+          <!-- Nasi Lemak -->
+          <div class="col">
+            <a class="text-decoration-none" href="nasi-lemak.html">
+              <div class="card gallery-card h-100">
+                <img src="img/nasi-lemak-1.webp" class="card-img-top" alt="Nasi Lemak">
+                <div class="card-body">
+                  <h5 class="card-title">Nasi Lemak</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Laksa -->
+          <div class="col">
+            <a class="text-decoration-none" href="laksa.html">
+              <div class="card gallery-card h-100">
+                <img src="img/laksa1.jpg" class="card-img-top" alt="Laksa">
+                <div class="card-body">
+                  <h5 class="card-title">Laksa</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Satay -->
+          <div class="col">
+            <a class="text-decoration-none" href="satay.html">
+              <div class="card gallery-card h-100">
+                <img src="img/satay1.jpg" class="card-img-top" alt="Satay">
+                <div class="card-body">
+                  <h5 class="card-title">Satay</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="site-container">
+        <div class="pt-5"></div>
+        <div class="container-xl mt-5">
+            <main class="px-3">
+                <!-- main content here -->
+            </main>
+        </div>
+        <footer class="mt-5 fs-6 fw-light text-center">
+            <div class="d-flex py-3 px-5 align-content-center justify-content-center">
+                <p class="text-center">Malaysian street food showcase website, by <a href="about.html"
+                        class="link-info">CT&nbsp;Group&nbsp;1</a>.
+                </p>
+            </div>
+        </footer>
+    </div>
+    <button class="btn btn-warning shadow rounded-circle d-none" type="button" id="btn-back-to-top" title="Go to top">
+        <svg class="bi" width="18" height="18" fill="currentColor">
+            <use href="bootstrap-icons.svg#chevron-double-up" />
+        </svg>
+    </button>
+    <script src="totop.js"></script>
+</body>
+
+</html>
