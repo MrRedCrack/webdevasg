@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LittleStreets | Locations</title>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <!-- Fonts + Site CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="custom.css">
+
+  <!-- Core JS -->
+  <script src="bootstrap.bundle.min.js" defer></script>
+  <script src="mode.js" defer></script>
+  <script src="totop.js" defer></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary shadow">
+    <div class="container-xl">
+      <a class="navbar-brand logo" href="index.html">
+        <span class="croissant-one-regular">LittleStreets</span>
+        <svg class="bi">
+          <use href="bootstrap-icons.svg#fork-knife" />
+        </svg>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+        aria-controls="navbarNav">
+        <svg class="bi text-body" width="1.5em" height="1.5em">
+          <use href="bootstrap-icons.svg#three-dots-vertical" />
+        </svg>
+      </button>
+
+      <div class="offcanvas offcanvas-end" id="navbarNav">
+        <div class="offcanvas-body">
+          <ul class="navbar-nav nav-masthead flex-row flex-wrap ms-md-auto align-items-lg-center">
+            <li class="nav-item col-12 col-lg-auto"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item col-12 col-lg-auto"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Food</a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <p class="dropdown-header">Highlights</p>
+                </li>
+                <li><a class="dropdown-item" href="nasi-lemak.html">Nasi Lemak</a></li>
+                <li><a class="dropdown-item" href="satay.html">Satay</a></li>
+                <li><a class="dropdown-item" href="laksa.html">Laksa</a></li>
+              </ul>
+            </li>
+            <li class="nav-item col-12 col-lg-auto"><a class="nav-link active" aria-current="page"
+                href="locations.html">Locations</a></li>
+            <li class="nav-item col-12 col-lg-auto"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item col-12 col-lg-auto"><a class="nav-link" href="contact.html">Contact</a></li>
+
+            <!-- Theme switch -->
+            <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+              <div class="vr d-none d-lg-flex h-100 mx-lg-2 opacity-25"></div>
+              <hr class="d-lg-none my-2 opacity-25">
+            </li>
+            <li class="nav-item dropdown">
+              <button class="btn btn-link nav-link px-0 px-lg-2 py-2 dropdown-toggle d-flex align-items-center"
+                id="bd-theme" type="button" data-bs-toggle="dropdown" data-bs-display="static">
+                <svg class="bi my-1 theme-icon-active" aria-hidden="true" width="16" height="16">
+                  <use href="bootstrap-icons.svg#moon-stars-fill" />
+                </svg>
+                <span class="d-lg-none ms-2" id="bd-theme-text">Change Theme</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                <li><button type="button" class="dropdown-item d-flex align-items-center"
+                    data-bs-theme-value="light"><svg class="bi me-2 opacity-50" width="16" height="16">
+                      <use href="bootstrap-icons.svg#sun-fill" />
+                    </svg>Light<svg class="bi ms-auto" width="16" height="16">
+                      <use href="bootstrap-icons.svg#check2" />
+                    </svg></button></li>
+                <li><button type="button" class="dropdown-item d-flex align-items-center active"
+                    data-bs-theme-value="dark"><svg class="bi me-2 opacity-50" width="16" height="16">
+                      <use href="bootstrap-icons.svg#moon-stars-fill" />
+                    </svg>Dark<svg class="bi ms-auto d-none" width="16" height="16">
+                      <use href="bootstrap-icons.svg#check2" />
+                    </svg></button></li>
+                <li><button type="button" class="dropdown-item d-flex align-items-center"
+                    data-bs-theme-value="auto"><svg class="bi me-2 opacity-50" width="16" height="16">
+                      <use href="bootstrap-icons.svg#circle-half" />
+                    </svg>Auto<svg class="bi ms-auto d-none" width="16" height="16">
+                      <use href="bootstrap-icons.svg#check2" />
+                    </svg></button></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="site-container">
+    <div class="pt-5"></div>
+
+    <header class="container-xl mt-5 text-center">
+      <h1 class="fw-bold">Street Food Locations</h1>
+      <p class="text-muted mb-4">Explore favourite hawker spots across Malaysia.</p>
+    </header>
+
+    <!-- Picture carousel (uses local images in src/img) -->
+    <section class="container-xl mb-5">
+      <div id="locCarousel" class="carousel slide loc-carousel shadow rounded overflow-hidden" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="img\loc-hero-1.jpg">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img\loc-hero-2.jpg">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img\loc-hero-3.jpg">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#locCarousel" data-bs-slide="prev"><span
+            class="carousel-control-prev-icon"></span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#locCarousel" data-bs-slide="next"><span
+            class="carousel-control-next-icon"></span></button>
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#locCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#locCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#locCarousel" data-bs-slide-to="2"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card grid -->
+    <main class="container-xl">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        <article class="col">
+          <div class="card h-100 shadow-sm loc-card">
+            <img src="img\loc-kl.jpg" class="card-img-top" alt="Jalan Alor">
+            <div class="card-body">
+              <h5 class="card-title">Jalan Alor Night Food Street</h5>
+              <p class="card-subtitle text-muted mb-2">Kuala Lumpur · Bukit Bintang</p>
+              <p class="card-text">Seafood grills, satay skewers, stir-fried noodles, and fruit stalls along a buzzing
+                strip.</p>
+              <div class="small text-body-secondary">Satay · Seafood · Street Market</div>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a class="btn btn-primary icon-link" target="_blank" rel="noopener"
+                href="https://maps.google.com/?q=Jalan+Alor,Kuala+Lumpur">
+                View on Maps <svg class="bi">
+                  <use href="bootstrap-icons.svg#chevron-right" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="col">
+          <div class="card h-100 shadow-sm loc-card">
+            <img src="img\loc-penang.JPG" class="card-img-top" alt="Gurney Drive Hawker Centre">
+            <div class="card-body">
+              <h5 class="card-title">Gurney Drive Hawker Centre</h5>
+              <p class="card-subtitle text-muted mb-2">George Town · Penang</p>
+              <p class="card-text">Penang classics in one place: Assam Laksa, Char Kway Teow, Oyster Omelette, and
+                desserts.</p>
+              <div class="small text-body-secondary">Laksa · Char Kway Teow</div>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a class="btn btn-primary icon-link" target="_blank" rel="noopener"
+                href="https://maps.google.com/?q=Gurney+Drive+Hawker+Centre,Penang">
+                View on Maps <svg class="bi">
+                  <use href="bootstrap-icons.svg#chevron-right" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="col">
+          <div class="card h-100 shadow-sm loc-card">
+            <img src="img\loc-malacca.jpg" class="card-img-top" alt="Jonker Street">
+            <div class="card-body">
+              <h5 class="card-title">Jonker Street Night Market</h5>
+              <p class="card-subtitle text-muted mb-2">Malacca City · Jonker Walk</p>
+              <p class="card-text">Weekend market with Baba-Nyonya snacks, satay, cendol, and colourful souvenirs.</p>
+              <div class="small text-body-secondary">Satay · Cendol · Peranakan</div>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a class="btn btn-primary icon-link" target="_blank" rel="noopener"
+                href="https://maps.google.com/?q=Jonker+Street+Night+Market,Malacca">
+                View on Maps <svg class="bi">
+                  <use href="bootstrap-icons.svg#chevron-right" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="col">
+          <div class="card h-100 shadow-sm loc-card">
+            <img src="img\loc-ipoh.JPG" class="card-img-top" alt="Jalan Yau Tet Shin">
+            <div class="card-body">
+              <h5 class="card-title">Jalan Yau Tet Shin Food Street</h5>
+              <p class="card-subtitle text-muted mb-2">Ipoh · New Town</p>
+              <p class="card-text">Tauge chicken rice, caramel custard, and iced coffee—best after dark.</p>
+              <div class="small text-body-secondary">Chicken Rice · Dessert</div>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a class="btn btn-primary icon-link" target="_blank" rel="noopener"
+                href="https://maps.google.com/?q=Jalan+Yau+Tet+Shin,Ipoh">
+                View on Maps <svg class="bi">
+                  <use href="bootstrap-icons.svg#chevron-right" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="col">
+          <div class="card h-100 shadow-sm loc-card">
+            <img src="img\loc-kk.PNG" class="card-img-top" alt="KK Waterfront">
+            <div class="card-body">
+              <h5 class="card-title">KK Waterfront Night Food Market</h5>
+              <p class="card-subtitle text-muted mb-2">Kota Kinabalu · Sabah</p>
+              <p class="card-text">Choose your catch and watch it grilled by the waterfront.</p>
+              <div class="small text-body-secondary">Seafood · Grill</div>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a class="btn btn-primary icon-link" target="_blank" rel="noopener"
+                href="https://maps.google.com/?q=Kota+Kinabalu+Waterfront+Night+Market">
+                View on Maps <svg class="bi">
+                  <use href="bootstrap-icons.svg#chevron-right" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="col">
+          <div class="card h-100 shadow-sm loc-card">
+            <img src="img\loc-kuching.PNG" class="card-img-top" alt="Top Spot Food Court">
+            <div class="card-body">
+              <h5 class="card-title">Top Spot Food Court</h5>
+              <p class="card-subtitle text-muted mb-2">Kuching · Sarawak</p>
+              <p class="card-text">Open-air court famed for Sarawak Laksa and a huge variety of seafood.</p>
+              <div class="small text-body-secondary">Laksa · Seafood</div>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a class="btn btn-primary icon-link" target="_blank" rel="noopener"
+                href="https://maps.google.com/?q=Top+Spot+Food+Court,Kuching">
+                View on Maps <svg class="bi">
+                  <use href="bootstrap-icons.svg#chevron-right" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </main>
+
+    <footer class="mt-5 fs-6 fw-light text-center">
+      <div class="d-flex py-3 px-5 align-content-center justify-content-center">
+        <p class="text-center">Malaysian street food showcase website, by <a href="about.html" class="link-info">CT
+            Group 1</a>.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Back to top -->
+  <button class="btn btn-warning shadow rounded-circle d-none" type="button" id="btn-back-to-top" title="Go to top">
+    <svg class="bi" width="18" height="18">
+      <use href="bootstrap-icons.svg#chevron-double-up" />
+    </svg>
+  </button>
+</body>
+
+</html>
